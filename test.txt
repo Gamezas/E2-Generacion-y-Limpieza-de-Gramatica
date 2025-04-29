@@ -1,0 +1,31 @@
+//Copia y pega estos ejemplos en las gramáticas para probarlas
+
+// Aceptado
+sentence = "inu wa koen de otokonohito o mimashita"
+
+//Aceptado
+sentence = "inu to neko wa koen de otokonohito o mimashita"
+
+//Aceptado
+sentence = "tori to neko wa koen de inu o kikimashita"
+
+//Aceptado
+sentence = "tori wa mise de neko o kikimashita"
+
+//Aceptado
+sentence = "neko wa mise de neko o mimashita"
+
+//Rechazado
+sentence = "neko de neko o mimashita"
+
+//Rechazado
+sentence = "inu neko wa koen de otokonohito o mimashita"
+
+//Rechazado
+sentence = "inu neko wa koen de otokonohito"
+
+//Rechazado
+sentence = "wa inu koen de otokonohito o neko"
+
+//Rechazado
+sentence = "inu wa koen de otokonohito mimashita"
