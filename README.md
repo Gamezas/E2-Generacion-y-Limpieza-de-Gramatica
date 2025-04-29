@@ -42,8 +42,11 @@ T -> NP To
 El lenguaje en japonés por naturaleza por naturaleza de su forma de escribir no tiene recursión a la izquierda, es por eso que se diseñó para construir la oración desde el centro permitiendo generar múltiples individuos en la oración.
 
 Usando la frase de ejemplo: 
-El perro vió a un hombre en el parque (ESP)
-Inu wa koen de otokonohito o mimashita (JAP)
+
+El perro y el gato vieron a un hombre en el parque (ESP)
+
+inu to neko wa koen de otokonohito o mimashita (JAP)
+
 Conseguimos los siguientes árboles:
 
 ![GrammarEvidence4](img4.jpg)
