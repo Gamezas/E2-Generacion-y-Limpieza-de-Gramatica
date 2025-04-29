@@ -4,11 +4,17 @@
 
 ## Descripción 
 Para esta evidencia se creó una gramática con el lenguaje Japonés, principalmente uso el 'Hiragana' romaji el cuál facilita su escritura para el procesamiento de la computadora.
+
 ![GrammarEvidence1](img1.jpg)
+
 En este vocabulario similar al español se juntan los símbolos para formar palabras, en este idioma igualmente existen los Kanjis, que son símbolos únicos que representan palabras completas muchas veces siendo conjunto de los símbolos del Hiragana incluso al juntar varios Kanjis se crean nuevas palabras.
+
 ![GrammarEvidence2](img2.jpg)
+
 En este lenguaje la estructura de la oración es la siguiente:
+
 ![GrammarEvidence3](img3.webp)
+
 Siendo el Adverbio/Sujeto de la oración, la partícula ‘wa’ que indica que es lo principal de la oración, el sustantivo la partícula que conecta con el verbo que se encuentra al final de la oración.
 
 Para esta gramática se creó el siguiente lenguaje:
@@ -39,9 +45,13 @@ Usando la frase de ejemplo:
 El perro vió a un hombre en el parque (ESP)
 Inu wa koen de otokonohito o mimashita (JAP)
 Conseguimos los siguientes árboles:
+
 ![GrammarEvidence4](img4.jpg)
+
 ![GrammarEvidence5](img5.png)
+
 ![GrammarEvidence6](img6.png)
+
 Con esto se sabe claramente que la gramática tiene recursividad por la izquierda así como es ambigua.
 
 ### Segunda gramática LL(1)
@@ -68,7 +78,9 @@ V  -> 'mimashita' | 'kikimashita'
 Sujeto -> 'inu' | 'neko' | 'tori' | 'otokonohito'
 ```
 Para eliminar la recursividad por izquierda es necesario aplicar la fórmula vista en clase
+
 ![GrammarEvidenc7](img7.png)
+
 De esta forma podemos refactorizar las funciones que se llaman así mismas para forzar una recursión hacia la derecha.
 ```
 S -> NP L NE
@@ -89,10 +101,14 @@ V -> 'mimashita' | 'kikimashita'
 Sujeto -> 'inu' | 'neko' | 'tori' | 'otokonohito'
 ```
 Y nos permite generar el siguiente árbol
+
 ![GrammarEvidence8](img8.png)
+
 Eliminando la recursión por la izquierda y la ambigüedad en la gramática volviéndola LL(1)
 (LL(1): Tablas generadas desde: https://www.cs.princeton.edu/courses/archive/spring20/cos320/LL1/)
+
 ![GrammarEvidence9](img9.png)
+
 ## Jerarquía de Chomsky
 ### Antes
 Analizando las reglas de la primera gramática, todas tiene un único no-terminal, esto cupliendo con la características de una gramática de Tipo 2 o Libre de contexto, es importante mencionar que al tener una ambigüedad y al ser recursivo por la izquierda o en otras palabras con la posibilidad de ser llamada múltiples veces será mucho más complicado de parsear con técnicas como LL(1).
