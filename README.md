@@ -4,8 +4,7 @@
 
 ## Descripción 
 Para esta evidencia se creó una gramática con el lenguaje Japonés, principalmente uso el 'Hiragana' romaji el cuál facilita su escritura para el procesamiento de la computadora.
-El Hiragana consta del siguiente vocabulario en base a símbolos:
-[img 1]
+![GrammarEvidence1](img1.jpg)
 En este vocabulario similar al español se juntan los símbolos para formar palabras, en este idioma igualmente existen los Kanjis, que son símbolos únicos que representan palabras completas muchas veces siendo conjunto de los símbolos del Hiragana incluso al juntar varios Kanjis se crean nuevas palabras.
 [img 2]
 En este lenguaje la estructura de la oración es la siguiente:
