@@ -7,7 +7,7 @@ Para esta evidencia se creó una gramática con el lenguaje Japonés, principalm
 
 ![GrammarEvidence1](img1.jpg)
 
-En este vocabulario similar al español se juntan los símbolos para formar palabras, en este idioma igualmente existen los Kanjis, que son símbolos únicos que representan palabras completas muchas veces siendo conjunto de los símbolos del Hiragana incluso al juntar varios Kanjis se crean nuevas palabras.
+El languaje japonés es una lengua aglutinante que posee un sistema de escritura algo complejo distribuidos en 3 tipos de glifos. Los Kanji, que son símbolos que representan palabras completas, como objetos, personas o animales por ejemplo. Así mismo hay dos silbalarios, el hiragana y el katakana.
 
 ![GrammarEvidence2](img2.jpg)
 
@@ -119,3 +119,6 @@ Analizando las reglas de la primera gramática, todas tiene un único no-termina
 Revisando la segunda gramática generada igualmente podemos concluir que es una gramática de Tipo 2 o Libre de contexto, sin embargo al eliminar el backtracking y la recursividad descendiente es mucho más fácil de parsear por lo tanto es mucho más eficiente que la primera gramática al poder comprobar la gramática de forma mucho más rápida.
 ## Conlcusión
 Al eliminar la ambigüedad en la gramática de Tipo 2 podemos generar una gramática que se apegue más a un reconocimiento lineal más que a uno polinomial permitiendo parsear gramáticas con una dificultad incluso en algunos casos más rápido que una O(n3), ya que permite parsear con complejidad O(n) en la mayoría de los casos al ser LL(1).
+
+## Referencias
+Club Yamagata. (s.f.) CULTURA DE JAPON : Idioma. Recuperado de: https://www.clubyamagata.com/blog/cultura-japonesa/cultura-de-japon-idioma/
