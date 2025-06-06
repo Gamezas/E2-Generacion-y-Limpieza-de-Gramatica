@@ -39,7 +39,7 @@ L -> L D | Lugar
 O -> O V | OB
 T -> NP To
 ```
-El lenguaje en japonés por naturaleza por naturaleza de su forma de escribir no tiene recursión a la izquierda, es por eso que se diseñó para construir la oración desde el centro permitiendo generar múltiples individuos en la oración.
+El lenguaje en japonés por naturaleza de su forma de escribir no tiene recursión a la izquierda, es por eso que esta gramática se diseñó para construir la oración desde el centro permitiendo generar múltiples formas de armar una misma oración.
 
 Usando la frase de ejemplo: 
 
@@ -58,12 +58,12 @@ Conseguimos los siguientes árboles:
 Con esto se sabe claramente que la gramática tiene recursividad por la izquierda así como es ambigua.
 
 ### Segunda gramática LL(1)
-Primero es importante identificar dónde se genera la ambigüedad, en este caso rápidamente se ve que es en las llamadas NP 
+Primero es importante identificar dónde se genera la ambigüedad, en este caso rápidamente se ve que es en las llamadas ```NP```
 ```
 NP -> NP NE | NP W | NP L | T NP | Sujeto
 ```
-Al ser muchas las opciones por las que se puede recorrer es importante refactorizar este punto, así mismo al iniciar la gramática se reparte la responsabilidad a NP L NE para reducir la cantidad de llamadas a NP de forma eficiente.
-Finalmente se eliminan algunas de las llamadas recursivas de NP llamando a Sujeto así eliminado la responsabilidad de NP y repartiendo la distribución de llamadas a través de la gramática, con esto eliminando la ambigüedad, pero aún teniendo la recursividad por izquierda.
+Al ser muchas las opciones por las que se puede recorrer es importante refactorizar este punto, así mismo al iniciar la gramática se reparte la responsabilidad a ```NP L NE``` para reducir la cantidad de llamadas a NP de forma eficiente.
+Finalmente se eliminan algunas de las llamadas recursivas de ```NP``` llamando a Sujeto así eliminado la responsabilidad de ```NP``` y repartiendo la distribución de llamadas a través de la gramática, con esto eliminando la ambigüedad, pero aún teniendo la recursividad por izquierda.
 ```
 S  -> NP L NE
 NP -> Sujeto | Sujeto W | NP T             
@@ -112,13 +112,23 @@ Eliminando la recursión por la izquierda y la ambigüedad en la gramática volv
 
 ![GrammarEvidence9](img9.png)
 
+## Capacidad de la gramática
+
+
 ## Jerarquía de Chomsky
 ### Antes
-Analizando las reglas de la primera gramática, todas tiene un único no-terminal, esto cupliendo con la características de una gramática de Tipo 2 o Libre de contexto, es importante mencionar que al tener una ambigüedad y al ser recursivo por la izquierda o en otras palabras con la posibilidad de ser llamada múltiples veces será mucho más complicado de parsear con técnicas como LL(1).
+Analizando las reglas de la primera gramática, todas tienen un único no-terminal, esto cupliendo con la características de una gramática de Tipo 2 o Libre de contexto, es importante mencionar que al tener una ambigüedad y al ser recursivo por la izquierda o en otras palabras con la posibilidad de ser llamada múltiples veces será mucho más complicado de parsear con técnicas como LL(1).
 ### Después
 Revisando la segunda gramática generada igualmente podemos concluir que es una gramática de Tipo 2 o Libre de contexto, sin embargo al eliminar el backtracking y la recursividad descendiente es mucho más fácil de parsear por lo tanto es mucho más eficiente que la primera gramática al poder comprobar la gramática de forma mucho más rápida.
 ## Conlcusión
 Al eliminar la ambigüedad en la gramática de Tipo 2 podemos generar una gramática que se apegue más a un reconocimiento lineal más que a uno polinomial permitiendo parsear gramáticas con una dificultad incluso en algunos casos más rápido que una O(n3), ya que permite parsear con complejidad O(n) en la mayoría de los casos al ser LL(1).
 
+
 ## Referencias
-Club Yamagata. (s.f.) CULTURA DE JAPON : Idioma. Recuperado de: https://www.clubyamagata.com/blog/cultura-japonesa/cultura-de-japon-idioma/
+Club Yamagata. (s.f.). CULTURA DE JAPON : Idioma. Recuperado de: https://www.clubyamagata.com/blog/cultura-japonesa/cultura-de-japon-idioma/
+
+Conociendo Japon (s.f.). Estructura de las oraciones japonesas y verbo desu. Recuperado de: https://conociendojapon.com/japones/estructura-de-las-oraciones-japonesas-y-verbo-desu/
+
+cgosorio (s.f.). Análisis LL (1). Recuperado de: http://cgosorio.es/BURGRAM/index8810.html?Los_algoritmos_de_an%E1lisis%0Asint%E1ctico:An%E1lisis_Sint%E1ctico%0ADescendente:An%E1lisis_LL_%281%29
+
+Kincaid Zak, Zhu Shaowei. (s.f.). LL(1) Parser Visualization. Recuperado de: https://www.cs.princeton.edu/courses/archive/spring20/cos320/LL1/
