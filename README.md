@@ -41,13 +41,26 @@ T -> NP To
 ```
 El lenguaje en japonés por naturaleza de su forma de escribir no tiene recursión a la izquierda, es por eso que esta gramática se diseñó para construir la oración desde el centro permitiendo generar múltiples formas de armar una misma oración.
 
-Usando la frase de ejemplo: 
+La capacidad de esta gramática esta en generar una oración simple con uno o dos sujetos en la oración en un lugar realizando una acción simple como ver o escuchar y otro sujeto que sea el visto o escuchado. Se pueden cambiar los sujetos y los lugares pero el formato de la oración es el mismo.
 
+Algunas oraciones de ejemplo son los siguientes:
+```
+inu wa koen de otokonohito o mimashita (JAP)
+El perro vió un hombre en el parque (ESP)
+
+tori to neko wa koen de inu o kikimashita (JAP)
+El pájaro y el perro escucharon al perro en el parque (ESP)
+
+tori wa mise de neko o kikimashita (JAP)
+El pájaro escuchó un pajaro en la tienda (ESP)
+```
+
+Usaremos de ejemplo para la generación de árboles la siguiente oración
+```
 El perro y el gato vieron a un hombre en el parque (ESP)
-
 inu to neko wa koen de otokonohito o mimashita (JAP)
-
-Conseguimos los siguientes árboles:
+```
+Con esta oración se generan los siguientes árboles:
 
 ![GrammarEvidence4](img4.jpg)
 
@@ -111,9 +124,6 @@ Eliminando la recursión por la izquierda y la ambigüedad en la gramática volv
 (LL(1): Tablas generadas desde: https://www.cs.princeton.edu/courses/archive/spring20/cos320/LL1/)
 
 ![GrammarEvidence9](img9.png)
-
-## Capacidad de la gramática
-
 
 ## Jerarquía de Chomsky
 ### Antes
