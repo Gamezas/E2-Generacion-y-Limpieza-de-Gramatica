@@ -164,14 +164,21 @@ Al correr el programa se nos imprimiran los abroles generados por la oración. p
 
 ### Ejemplos
 Oración: "tori wa mise de neko o kikimashita"
+
 Árbol:
+
 ![image](https://github.com/user-attachments/assets/8da4db5d-11c9-41d5-80a8-004c5ca5028c)
 
 Oración: "inu wa koen de otokonohito o mimashita"
+
 Árbol:
+
 ![image](https://github.com/user-attachments/assets/6e968173-9a3a-46f4-9be9-170af810d097)
 
 Oración: "neko wa mise de neko o mimashita"
+
+Árbol:
+
 ![image](https://github.com/user-attachments/assets/895dfcc0-1bdb-4624-a558-1578869fe403)
 
 ## Jerarquía de Chomsky
